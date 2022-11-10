@@ -1,0 +1,17 @@
+<div *ngFor="let col of columns">
+  <div class="input-container">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" [checked]="col.isTrusted" id="flexCheckDefault" (change)="onSaveColumnTypeChanged(col)">
+      <label class="form-check-label" for="flexCheckDefault">
+        {{col.name}} столбец
+      </label>
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let en of enteredColumns">
+  col: {{en.name}} - {{en.isTrusted}}
+</div>
+
+
+
